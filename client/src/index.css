@@ -1,0 +1,224 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  /* Denham Sod Premium Brand Colors */
+  --primary: #1B4D2E;
+  --primary-foreground: #FFFFFF;
+  --sidebar-primary: #1B4D2E;
+  --sidebar-primary-foreground: #FFFFFF;
+  --accent: #D4AF37;
+  --accent-foreground: #1A1A1A;
+  --chart-1: #1B4D2E;
+  --chart-2: #2D7A4D;
+  --chart-3: #3FA35C;
+  --chart-4: #5CB85C;
+  --chart-5: #7FCC7F;
+  --radius: 0.75rem;
+  --background: #F8F9F7;
+  --foreground: #1A1A1A;
+  --card: #FFFFFF;
+  --card-foreground: #1A1A1A;
+  --popover: #FFFFFF;
+  --popover-foreground: #1A1A1A;
+  --secondary: #E8E8E8;
+  --secondary-foreground: #1A1A1A;
+  --muted: #D0D0D0;
+  --muted-foreground: #666666;
+  --destructive: #DC2626;
+  --destructive-foreground: #FFFFFF;
+  --border: #E0E0E0;
+  --input: #FFFFFF;
+  --ring: #1B4D2E;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #1A1A1A;
+  --sidebar-accent: #F8F9F7;
+  --sidebar-accent-foreground: #1B4D2E;
+  --sidebar-border: #E0E0E0;
+  --sidebar-ring: #1B4D2E;
+}
+
+.dark {
+  --primary: #1B4D2E;
+  --primary-foreground: #FFFFFF;
+  --sidebar-primary: #1B4D2E;
+  --sidebar-primary-foreground: #FFFFFF;
+  --background: #0F1410;
+  --foreground: #E8E8E8;
+  --card: #1A1F1A;
+  --card-foreground: #E8E8E8;
+  --popover: #1A1F1A;
+  --popover-foreground: #E8E8E8;
+  --secondary: #2D3A2D;
+  --secondary-foreground: #B8B8B8;
+  --muted: #3D483D;
+  --muted-foreground: #888888;
+  --accent: #D4AF37;
+  --accent-foreground: #1A1A1A;
+  --destructive: #FF6B6B;
+  --destructive-foreground: #FFFFFF;
+  --border: #2D3A2D;
+  --input: #1A1F1A;
+  --ring: #D4AF37;
+  --chart-1: #7FCC7F;
+  --chart-2: #5CB85C;
+  --chart-3: #3FA35C;
+  --chart-4: #2D7A4D;
+  --chart-5: #1B4D2E;
+  --sidebar: #1A1F1A;
+  --sidebar-foreground: #E8E8E8;
+  --sidebar-accent: #2D3A2D;
+  --sidebar-accent-foreground: #D4AF37;
+  --sidebar-border: #2D3A2D;
+  --sidebar-ring: #D4AF37;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Poppins', sans-serif;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    @apply text-5xl md:text-6xl font-bold tracking-tight text-foreground;
+  }
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    @apply text-4xl md:text-5xl font-bold tracking-tight text-foreground;
+  }
+
+  h3 {
+    font-family: 'Poppins', sans-serif;
+    @apply text-2xl md:text-3xl font-bold text-foreground;
+  }
+
+  h4 {
+    font-family: 'Poppins', sans-serif;
+    @apply text-xl font-semibold text-foreground;
+  }
+}
+
+@layer components {
+  .accent-label {
+    font-family: 'Montserrat', sans-serif;
+    @apply text-sm font-semibold uppercase tracking-widest text-primary;
+  }
+
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      max-width: 1280px;
+    }
+  }
+
+  .shadow-premium {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  .shadow-premium-lg {
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+  }
+
+  .card-3d {
+    transition: all 0.3s ease-out;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  .card-3d:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+  }
+
+  .frame-circle {
+    @apply rounded-full overflow-hidden;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  }
+
+  .divider-diagonal {
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+
+  .divider-diagonal-reverse {
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+  }
+}
