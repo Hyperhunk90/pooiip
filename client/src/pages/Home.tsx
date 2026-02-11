@@ -65,13 +65,21 @@ export default function Home() {
               Denham Sod
             </span>
           </div>
-          <a
-            href="tel:225-205-2022"
-            className="flex items-center gap-2 text-forest-green hover:text-warm-gold transition-colors"
-          >
-            <Phone className="w-5 h-5" />
-            <span className="font-accent font-semibold">225-205-2022</span>
-          </a>
+          <div className="flex items-center gap-6">
+            <a
+              href="/services"
+              className="text-sm font-medium text-forest-green hover:text-warm-gold transition-colors"
+            >
+              Services
+            </a>
+            <a
+              href="tel:225-205-2022"
+              className="flex items-center gap-2 text-forest-green hover:text-warm-gold transition-colors"
+            >
+              <Phone className="w-5 h-5" />
+              <span className="font-accent font-semibold">225-205-2022</span>
+            </a>
+          </div>
         </div>
       </nav>
 

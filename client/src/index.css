@@ -43,12 +43,19 @@
 }
 
 :root {
-  /* Denham Sod Color Palette */
+  /* Denham Sod Color Palette - Home Page */
   --forest-green: #1B4D2E;
   --warm-gold: #D4AF37;
   --off-white: #F8F9F7;
   --crisp-white: #FFFFFF;
   --dark-slate: #2C3E50;
+  
+  /* Services Page - Warm Earthy Palette */
+  --sage-green: #7BA882;
+  --warm-cream: #F5E6D3;
+  --terracotta: #C89968;
+  --soft-beige: #EBE0D1;
+  --deep-brown: #5D4E37;
   
   /* Primary Design Colors */
   --primary: #1B4D2E;
